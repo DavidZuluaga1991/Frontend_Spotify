@@ -1,4 +1,4 @@
-Hola, para iniciar la aplicación en modo Desarrollo hay que ejecutar 2 aplicaciones.
+Para iniciar la aplicación en modo Desarrollo hay que ejecutar 2 aplicaciones.
 
 1. Backend en Node.js
 $ cd auth-server
