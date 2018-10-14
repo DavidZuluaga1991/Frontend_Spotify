@@ -1,0 +1,29 @@
+<div class="row color-fond">
+  <div>
+    <div class="jumbotron" *ngIf="access_token == null">
+      <a href="http://localhost:8888">Iniciar con Spotify</a>
+    </div>
+
+    <div *ngIf="access_token != null">
+      <div class="row col-md-6 offset-md-3" *ngIf="dataSpotify != null">
+        <div class="cursor-art col-sm-6 mb-4" *ngFor="let data of dataSpotify.items">
+          <div class="card">
+            <div class="row">
+              <div class="col-md-12 mb-2">
+                <img class="card-img-top" src="{{data.images[0].url}}" alt="No se encontro la Img">
+              </div>
+              <div class="col-md-10 mb-2 offset-1">
+                  <small>{{data.name}}</small>
+              </div>
+              <div class="col-md-1 mb-2 offset-1" *ngFor="let art of data.artists">
+                <small>
+                  <a [routerLink]="['/albunes/' + art.id]" class="badge badge-primary">{{art.name}}</a>
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

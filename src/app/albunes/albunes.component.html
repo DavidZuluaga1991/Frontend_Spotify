@@ -1,0 +1,30 @@
+<div class="row color-fond">
+  <div class="margin-header col-md-7 offset-md-2">
+      <div class="row mb-3">
+          <div class="col-6 col-sm-3"><img class="border-re" src="{{imagesArt[2].url}}" alt="No se encontro la Img"></div>
+          <div class="col-6 col-sm-4"><p class="text-white">{{nameArt}}</p></div>
+      </div>
+  </div>
+  <div class="col-md-7 offset-md-2">
+    <div class="bg-dark">
+      <table class="table table-dark ">
+        <thead>
+          <tr>
+            <th scope="col">Foto</th>
+            <th scope="col">Album</th>
+            <th scope="col">Canción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of dataAlbum; let i = index">
+            <td>
+              <img class="card-img-top" src="{{data.album.images[2].url}}" alt="No se encontro la Img">
+            </td>
+            <td>{{data.album.name}}</td>
+            <td>{{data.name}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
